@@ -13,7 +13,7 @@ pool:
   vmImage: windows-latest
 
 steps:
-- script: |
+- powershell: |
     $env:Var1
     $env:Secret1
   displayName: "Output env"
