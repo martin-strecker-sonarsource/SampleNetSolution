@@ -3,9 +3,6 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-variables:
-- group: TestVarGroup
-
 trigger:
 - main
 
@@ -13,10 +10,6 @@ pool:
   vmImage: windows-latest
 
 steps:
-- powershell: |
-    $env:Var1
-    $env:Secret1
-  displayName: "Output env"
 - task: SonarQubePrepare@5
   inputs:
     SonarQube: 'Peach'
